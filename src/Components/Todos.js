@@ -9,7 +9,7 @@ const Todos=({Todo})=>{
         {
            Todo.map(Todo => (
             <ListGroupItem  >
-              {Todo }
+              {Todo  }
            
             </ListGroupItem>
           ))
