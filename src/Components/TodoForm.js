@@ -5,15 +5,26 @@ import { v4 as uuidv4 } from 'uuid';
 const TodoForm=({AddTodo})=>{   // even a method can be passed as parameter
     const[todoString,setTodoString]=useState("")
     
-    const HandleSubmit=()=>{
+    const HandleSubmit=( )=>{
+
+        
+      
+         if(todoString==="")
+         {
+             return alert("Its Empty")
+         }
+        
+         const Todo={
+             todoString,
+             id:uuidv4()
+         }
 
         
 
         
 
-        
-
-        AddTodo(todoString)
+        AddTodo(Todo)
+         
         setTodoString("")
 
 

@@ -28,6 +28,13 @@ import './App.css';
     const addTodo=(Tod)=>{
       setTodo([...Todo,Tod])
     }
+    const markComplete=(id)=>{
+      setTodo(Todo.filter((Todo)=>(
+        Todo.id!==id
+
+      )))
+    }
+    
      
     
   
@@ -38,7 +45,7 @@ import './App.css';
       <div>
         <h1>Todo app with local storage</h1>
          <TodoForm AddTodo={addTodo}></TodoForm>
-         <Todos Todo={Todo}></Todos>   
+         <Todos Todo={Todo} markComplete={markComplete}  ></Todos>   
        
       </div>
        
